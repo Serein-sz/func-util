@@ -1,4 +1,4 @@
-package util
+package func_util
 
 func Filter[E any](slice []E, predict func(E) bool) (filterResult []E) {
 	for _, v := range slice {

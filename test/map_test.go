@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/Serein-sz/func-util/util"
+	"github.com/Serein-sz/func-util"
 	"reflect"
 	"testing"
 )
@@ -20,7 +20,7 @@ func TestBaseMap(t *testing.T) {
 		expectResult = append(expectResult, v*2)
 	}
 
-	realResult := util.Map(pendingTestSlice, func(i int) int {
+	realResult := func_util.Map(pendingTestSlice, func(i int) int {
 		return i * 2
 	})
 
@@ -47,7 +47,7 @@ func TestStructMap(t *testing.T) {
 		expectResult = append(expectResult, p)
 	}
 
-	realResult := util.Map(pendingTestSlice, func(p Position) Position {
+	realResult := func_util.Map(pendingTestSlice, func(p Position) Position {
 		p.x++
 		return p
 	})

@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/Serein-sz/func-util/util"
+	"github.com/Serein-sz/func-util"
 	"reflect"
 	"testing"
 )
@@ -22,7 +22,7 @@ func TestBaseFilter(t *testing.T) {
 		}
 	}
 
-	realResult := util.Filter(pendingTestSlice, func(i int) bool {
+	realResult := func_util.Filter(pendingTestSlice, func(i int) bool {
 		return i%2 == 0
 	})
 
@@ -50,7 +50,7 @@ func TestStructFilter(t *testing.T) {
 		}
 	}
 
-	realResult := util.Filter(pendingTestSlice, func(p Position) bool {
+	realResult := func_util.Filter(pendingTestSlice, func(p Position) bool {
 		return p.x == p.y
 	})
 
